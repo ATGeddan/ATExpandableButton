@@ -1,7 +1,12 @@
 # ATExpandableButton
 
 An animated interactive button class which supports expanding within the view or performing an animated transition to another view controller.
+## Preview Samples
+| Expandable Buttons | Transition Buttons |
+| ------------- | ------------- |
+| <a href="https://imgflip.com/gif/30yxsd"><img src="https://i.imgflip.com/30yxsd.gif" title="made at imgflip.com"/></a>  | <a href="https://imgflip.com/gif/30yxpc"><img src="https://i.imgflip.com/30yxpc.gif" title="made at imgflip.com"/></a>  |
 
+Check out the demo project for a more thorough look.
 ## Installing
 
 Copy these 3 files to your project
@@ -11,7 +16,6 @@ CustomTransitionViewController.swift
 Animators.swift
 ```
 And that's it!
-Check out the demo project for a more thorough look.
 
 ## Usage
 
@@ -104,3 +108,12 @@ Customizable values:
 
   ```
   then add it as a subview and that's it!
+  
+  ## LICENSE
+
+ATExpandableButton is under MIT license. See the LICENSE file for more info.
+
+## Acknowledgments
+
+Transition View Controller class and animators done with the help of Tibor Bödecs's guide here 
+https://theswiftdev.com/2018/04/26/ios-custom-transition-tutorial-in-swift/
