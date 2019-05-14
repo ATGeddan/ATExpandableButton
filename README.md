@@ -68,7 +68,7 @@ Customizable values:
   ```
 ### Transition Buttons
 1. Make your destination ViewController and source ViewController subclasses to CustomTransitionViewController instead of UIViewController
-2. Use the transition Protocol `ATTransitionButtonDelegate` on the source (first) ViewController to implement its method 
+2. Adopt the transition Protocol `ATTransitionButtonDelegate` on the source (first) ViewController to implement its method 
   ``` swift
   func didEndTransitionAnimation(_ button: ATExpandableButton) {
      performSegue(withIdentifier: "toVC2", sender: nil)
