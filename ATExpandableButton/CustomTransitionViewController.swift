@@ -8,9 +8,15 @@
 
 import UIKit
 
-class CustomTransitionViewController: UIViewController {
+protocol didPopViewControllerDelegate: class {
+  func didPopViewController()
+}
+
+class CustomTransitionViewController: UIViewController, didPopViewControllerDelegate {
   
   var interactionController: UIPercentDrivenInteractiveTransition?
+  
+  weak var didPopDelegate: didPopViewControllerDelegate?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -24,6 +30,11 @@ class CustomTransitionViewController: UIViewController {
     super.viewDidAppear(animated)
     
     self.navigationController?.delegate = self
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    didPopDelegate?.didPopViewController()
   }
   
   @objc func handleEdgePan(_ gesture: UIScreenEdgePanGestureRecognizer) {
@@ -50,6 +61,21 @@ class CustomTransitionViewController: UIViewController {
       break
     }
   }
+  
+  func didPopViewController() {
+    view.subviews.forEach { (view) in
+      if let transitionBtn = view as? ATExpandableButton, transitionBtn.expanded {
+        transitionBtn.returnToNormal()
+      }
+    }
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let destination = segue.destination as? CustomTransitionViewController {
+      destination.didPopDelegate = self
+    }
+  }
+  
 }
 
 extension CustomTransitionViewController: UINavigationControllerDelegate {

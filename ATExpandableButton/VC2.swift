@@ -10,10 +10,12 @@ import UIKit
 
 class VC2: CustomTransitionViewController {
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-  }
+}
+
+class VC3: CustomTransitionViewController {
   
+  @IBAction func dismissPressed(_ sender: UIButton) {
+    dismiss(animated: false)
+  }
   
 }

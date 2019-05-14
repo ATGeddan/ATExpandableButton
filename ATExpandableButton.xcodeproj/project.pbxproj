@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260D09DF228B4E11006A295C /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D09DE228B4E11006A295C /* VC2.swift */; };
 		2618E61A2285BE65006882F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618E6192285BE65006882F9 /* AppDelegate.swift */; };
 		2618E61C2285BE65006882F9 /* VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618E61B2285BE65006882F9 /* VC1.swift */; };
 		2618E61F2285BE65006882F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2618E61D2285BE65006882F9 /* Main.storyboard */; };
@@ -15,12 +16,12 @@
 		2618E62E2285BECE006882F9 /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618E62B2285BECD006882F9 /* CustomTransitionViewController.swift */; };
 		2618E62F2285BECE006882F9 /* Animators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618E62C2285BECD006882F9 /* Animators.swift */; };
 		2618E6302285BECE006882F9 /* ATExpandableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618E62D2285BECE006882F9 /* ATExpandableButton.swift */; };
-		2618E6322285D3DB006882F9 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618E6312285D3DB006882F9 /* VC2.swift */; };
 		2618E6362285D4FE006882F9 /* InnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618E6342285D4FE006882F9 /* InnerView.swift */; };
 		2618E6372285D4FE006882F9 /* InnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2618E6352285D4FE006882F9 /* InnerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		260D09DE228B4E11006A295C /* VC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		2618E6162285BE65006882F9 /* ATExpandableButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATExpandableButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2618E6192285BE65006882F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2618E61B2285BE65006882F9 /* VC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC1.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		2618E62B2285BECD006882F9 /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionViewController.swift; sourceTree = "<group>"; };
 		2618E62C2285BECD006882F9 /* Animators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animators.swift; sourceTree = "<group>"; };
 		2618E62D2285BECE006882F9 /* ATExpandableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATExpandableButton.swift; sourceTree = "<group>"; };
-		2618E6312285D3DB006882F9 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		2618E6342285D4FE006882F9 /* InnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerView.swift; path = ATExpandableButton/InnerView.swift; sourceTree = SOURCE_ROOT; };
 		2618E6352285D4FE006882F9 /* InnerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InnerView.xib; path = ATExpandableButton/InnerView.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -69,7 +69,7 @@
 				2618E6332285D4F1006882F9 /* InnerView */,
 				2618E6192285BE65006882F9 /* AppDelegate.swift */,
 				2618E61B2285BE65006882F9 /* VC1.swift */,
-				2618E6312285D3DB006882F9 /* VC2.swift */,
+				260D09DE228B4E11006A295C /* VC2.swift */,
 				2618E62D2285BECE006882F9 /* ATExpandableButton.swift */,
 				2618E62C2285BECD006882F9 /* Animators.swift */,
 				2618E62B2285BECD006882F9 /* CustomTransitionViewController.swift */,
@@ -165,10 +165,10 @@
 				2618E62F2285BECE006882F9 /* Animators.swift in Sources */,
 				2618E6302285BECE006882F9 /* ATExpandableButton.swift in Sources */,
 				2618E62E2285BECE006882F9 /* CustomTransitionViewController.swift in Sources */,
-				2618E6322285D3DB006882F9 /* VC2.swift in Sources */,
 				2618E6362285D4FE006882F9 /* InnerView.swift in Sources */,
 				2618E61C2285BE65006882F9 /* VC1.swift in Sources */,
 				2618E61A2285BE65006882F9 /* AppDelegate.swift in Sources */,
+				260D09DF228B4E11006A295C /* VC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

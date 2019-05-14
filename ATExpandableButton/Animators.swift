@@ -11,7 +11,7 @@ import UIKit
 class FadePushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
   
   open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-    return 0.25
+    return 0.1
   }
   
   func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -44,7 +44,7 @@ class FadePopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
   let type: TransitionType
   let duration: TimeInterval
   
-  init(type: TransitionType, duration: TimeInterval = 0.25) {
+  init(type: TransitionType, duration: TimeInterval = 0.1) {
     self.type = type
     self.duration = duration
     

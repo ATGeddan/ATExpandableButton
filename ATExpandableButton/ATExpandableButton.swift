@@ -98,10 +98,11 @@ class ATExpandableButton: UIView {
   private var _expanded = false
   
   /// init for expanding type button
-  public init(frame: CGRect, expandedFrame: CGRect, innerView: UIView) {
+  public init(frame: CGRect, expandedFrame: CGRect, innerView: UIView, title: String) {
     super.init(frame: frame)
     originalFrame = frame
     self.expandedFrame = expandedFrame
+    self.title = title
     let tap = UITapGestureRecognizer(target: self, action: #selector(handleExpandTap))
     addGestureRecognizer(tap)
     innerView.frame = expandedChildView.frame
@@ -262,6 +263,7 @@ class ATExpandableButton: UIView {
   func performTransitionAnimation() {
     guard let superView = superview else {return}
     superView.bringSubviewToFront(self)
+    hideOthers()
     UIView.animate(withDuration: 0.15) {
       self.subviews.forEach { (view) in
         view.alpha = 0
@@ -272,18 +274,21 @@ class ATExpandableButton: UIView {
     }, completion:  { [weak self] _ in
       guard let strongSelf = self else {return}
       strongSelf.delegate?.didEndTransitionAnimation(strongSelf)
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-        strongSelf.returnToNormal()
-      })
+      strongSelf._expanded = true
     })
   }
   
-  private func returnToNormal() {
+  func returnToNormal() {
     guard let original = originalFrame else {return}
-    frame = original
-    subviews.forEach { (view) in
-      view.alpha = 1
+    UIView.animate(withDuration: 0.25, animations: {
+      self.frame = original
+    }, completion: { [weak self] _ in
+      self?.popOthers()
+      self?._expanded = false
+      self?.subviews.forEach { (view) in
+        view.alpha = 1
     }
+    })
   }
   
 }
