@@ -31,21 +31,21 @@ class ATExpandableButton: UIView {
   }
   
   /// Text color of the title.
-  open var titleColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1) {
+  open var titleColor: UIColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1) {
     didSet {
       titleLabel.textColor = titleColor
     }
   }
   
   /// Background color for inner View
-  open var innerViewBackgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
+  open var innerViewBackgroundColor: UIColor = .clear {
     didSet {
       expandedChildView.backgroundColor = innerViewBackgroundColor
     }
   }
   
   /// Background color for main button
-  open var backGroundColor: UIColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1) {
+  open var backGroundColor: UIColor = #colorLiteral(red: 0.04904369265, green: 0.1762623787, blue: 0.2822244465, alpha: 1) {
     didSet {
       backgroundColor = backGroundColor
     }
@@ -154,7 +154,7 @@ class ATExpandableButton: UIView {
   
   func calculateExpandedFrame() -> CGRect! {
     guard originalFrame != nil, let superFrame = superview?.frame else {return nil}
-    let newHeight = superFrame.maxY - 50
+    let newHeight = superFrame.maxY - 200
     return CGRect(x: superFrame.minX + 10, y: 40, width: superFrame.size.width - 20, height: newHeight)
   }
   
